@@ -15,7 +15,7 @@ The toolkit brings together multiple reconciliation services within a common ins
 
 ## Features
 
-- Library of Congress authority reconciliation (LCNAF and LCSH)
+- Library of Congress authority reconciliation (LCNAF and LCSH, internet connection required)
 - Canadian Subject Headings reconciliation using csv-reconcile
 - One-click startup of multiple reconciliation services
 - Shared Python environment for simplified installation
@@ -60,9 +60,9 @@ OpenRefine must be installed separately. The toolkit provides reconciliation ser
    
 4. The installer will:
 
-	- create a shared Python virtual environment.
-	- install the required Python packages from `requirements.txt`.
-	- prepare the toolkit for use.
+- create a shared Python virtual environment.
+- install the required Python packages from `requirements.txt`.
+- prepare the toolkit for use.
 
 5. When installation is complete, close the installer window.
 
@@ -99,12 +99,12 @@ http://localhost:5001/reconcile
 ```
 
 5. Use the Library of Congress service for:
-	- LCNAF
-	- LCSH
+- LCNAF
+- LCSH
 
 6. Use the CSH service for:
 
-	- Canadian Subject Headings
+- Canadian Subject Headings (CSH)
 
 When you are finished using OpenRefine, close the two reconciliation service command windows to stop the toolkit.
 
@@ -295,6 +295,12 @@ OpenRefine stores configured reconciliation services in the user's profile direc
 
 If reconciliation services have been removed, add them again using the URLs listed above.
 
+## Support
+
+Bug reports, feature requests, and suggestions are welcome.
+
+Please use the GitHub issue tracker to report bugs or request enhancements.
+
 ## Roadmap
 
 Future planned additions include:
@@ -315,11 +321,14 @@ Third-party software included with the toolkit remains subject to its original l
 
 ## Acknowledgements
 
-This toolkit builds upon existing open-source projects, including:
+This toolkit builds upon the following open-source projects:
 
-- The Library of Congress OpenRefine reconciliation service
-- csv-reconcile
+- **csv-reconcile** by gitonthescene
+  <https://github.com/gitonthescene/csv-reconcile>
 
-The toolkit integrates these projects into a unified installation and documentation framework to simplify deployment, maintenance, and future extension for Canadian library environments.
+- **LoC-reconcile** by mphilli
+  <https://github.com/mphilli/LoC-reconcile>
 
-The authors of the original projects deserve full credit for their respective software. This toolkit focuses on integration, configuration, documentation, and packaging rather than replacing or reimplementing their work.
+The OpenRefine Reconciliation Toolkit for Canadian Libraries integrates these projects into a unified installation, configuration, and documentation framework to simplify deployment, maintenance, and future extension for Canadian library environments.
+
+The authors of the original projects deserve full credit for their respective software. This toolkit focuses on integrating, configuring, documenting, testing, and packaging these projects rather than replacing or reimplementing them.
