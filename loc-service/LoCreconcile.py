@@ -108,5 +108,6 @@ def render_index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    # default service URL: http://127.0.0.1:5000/reconcile/LoC
+    app.run(host="localhost", port=5000, debug=True)
+     # default service URL: http://localhost:5000/reconcile/LoC
+    # Tobremoved default service URL: http://127.0.0.1:5000/reconcile/LoC
