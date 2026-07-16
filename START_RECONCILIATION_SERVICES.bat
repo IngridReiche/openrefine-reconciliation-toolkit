@@ -7,14 +7,14 @@ REM Starts:
 REM   - Library of Congress Reconciliation Service
 REM   - Canadian Subject Headings Reconciliation Service
 REM
-REM Toolkit Version: 1.0.0
+REM Toolkit Version: 1.1.0
 REM =================================================
 
-title OpenRefine Reconciliation Toolkit Launcher
+title OpenRefine Reconciliation Toolkit Launcher v1.1.0
 cls
 
 echo.
-echo Starting OpenRefine Reconciliation Toolkit...
+echo Starting OpenRefine Reconciliation Toolkit v1.1.0...
 echo.
 cd /d "%~dp0"
 
@@ -29,6 +29,7 @@ IF NOT EXIST "venv\Scripts\activate.bat" (
 
 echo Starting CSH reconciliation service on http://localhost:5001/reconcile
 start "CSH Reconciliation Service" cmd /k "cd /d "%~dp0csh-service" && call "%~dp0venv\Scripts\activate.bat" && csv-reconcile serve"
+
 
 echo Starting LoC reconciliation service on http://localhost:5000/reconcile/LoC
 start "LoC Reconciliation Service" cmd /k "cd /d "%~dp0loc-service" && call "%~dp0venv\Scripts\activate.bat" && python LoCreconcile.py"

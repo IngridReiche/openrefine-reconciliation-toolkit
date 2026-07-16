@@ -2,7 +2,7 @@
 
 Making authority reconciliation in OpenRefine easier to install, maintain, and extend for Canadian libraries.
 
-**Toolkit Version:** 1.0.0  
+**Toolkit Version:** 1.1.0  
 **Status:** Beta
 
 Initial public release supporting Library of Congress and Canadian Subject Headings reconciliation services for OpenRefine.

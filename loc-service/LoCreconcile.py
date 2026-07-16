@@ -41,10 +41,13 @@ metadata = {
 
 
 def preprocess(token):
+    """Clean whitespace while preserving authority-heading punctuation."""
+    token = token.strip()
+
     if token.endswith("."):
         token = token[:-1]
-    return token.lower().lstrip().rstrip().replace("--", " ").replace(", ", " ")\
-        .replace("\t", "").replace("\n", "")
+
+    return token.replace("\t", " ").replace("\n", " ")
     # may add other preprocessing steps later
 
 
@@ -110,4 +113,3 @@ def render_index():
 if __name__ == "__main__":
     app.run(host="localhost", port=5000, debug=True)
      # default service URL: http://localhost:5000/reconcile/LoC
-    # Tobremoved default service URL: http://127.0.0.1:5000/reconcile/LoC
